@@ -1,0 +1,132 @@
+html{
+    background-color: #2A475E;
+    font-family: cursive;
+}
+
+
+img{
+    width: 150px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-bottom: 5px solid rgb(9, 9, 9);
+    padding-left: 0;
+    margin: 10px;
+  }
+  
+  .item {
+    list-style: none;
+    margin: 0px 10px;
+    color: black;
+    text-transform: uppercase;
+    padding: 8px;
+  }
+  
+ li.item:hover {
+    background-color: grey;
+    
+  }
+
+table{
+    border-collapse: collapse;
+}
+td,th{
+    border: solid white 0.1rem;
+    padding: .5rem;
+    text-align: center;
+    
+}
+table{
+    width: 100%;
+}
+
+
+ul li,nav li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    
+}
+
+table td a{
+    text-decoration: none;
+    color: wheat;
+}
+
+
+
+.anchor{
+    color: aliceblue;
+}
+
+footer{
+    margin-left: 600px;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.container-button,.container-button a button {
+    margin: 5px;
+}
+
+
+a button, ul li button{
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    border: 0.3rem solid black;
+    
+    border-radius: .5rem;
+    font-size: .8rem;
+    margin-bottom: 0.5rem;
+}
+
+a button:hover{
+    cursor: pointer;
+    background-color: rgb(201, 201, 201);
+    transition: 0.5s;
+    border: 0.3rem solid #171a21;
+    color: black;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+
+fieldset input{
+    margin-bottom: 1rem;
+    width: 60%;
+    margin-left: 5%;
+    font-family: "Motiva Sans", Sans-serif;
+    color: aliceblue;
+}
+fieldset button{
+    
+    width: 20%;
+    margin-left: 35%;
+    
+
+}
+
+
+fieldset div{
+    justify-content: center;
+    
+}
+fieldset{
+    width: 50%;
+    margin-left: 25%;
+    
+    box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
+}
+
+a{
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: aliceblue;
+}
