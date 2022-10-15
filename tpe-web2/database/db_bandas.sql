@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-10-2022 a las 18:22:35
+-- Tiempo de generación: 15-10-2022 a las 23:12:46
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -41,11 +41,10 @@ CREATE TABLE `bandas` (
 --
 
 INSERT INTO `bandas` (`id_banda`, `id_genero_fk`, `nombre_banda`, `cantidad_discos`, `origen_banda`, `imagen_banda`) VALUES
-(1, 1, 'La vela puerca', 10, 'Montevideo,Uruguay(1995)', './images/la vela puercaa.jpg'),
 (3, 2, 'ABBA', 9, ' Estocolmo, Suecia (1972)', './images/abbaa.jpg'),
 (4, 1, 'Soda stereo', 7, 'Buenos Aires,Argentina(1982)', './images/soda stereo.png'),
 (5, 2, 'La Oreja de Van Gogh', 8, 'San Sebastián, España (1996)', './images/la oreja de van gogh.jpg'),
-(6, 1, 'El Plan De La Mariposa', 5, 'Necochea,Argentina(2008)', './images/el plan de la mariposa.jpg');
+(19, 6, 'asddsa', 12, 'Berlin(Alemania)', '');
 
 -- --------------------------------------------------------
 
@@ -55,7 +54,7 @@ INSERT INTO `bandas` (`id_banda`, `id_genero_fk`, `nombre_banda`, `cantidad_disc
 
 CREATE TABLE `genero` (
   `id_genero` int(11) NOT NULL,
-  `genero` varchar(25) NOT NULL,
+  `genero_banda` varchar(25) NOT NULL,
   `historia_genero` varchar(500) NOT NULL,
   `instrumentos_comunes` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -64,9 +63,28 @@ CREATE TABLE `genero` (
 -- Volcado de datos para la tabla `genero`
 --
 
-INSERT INTO `genero` (`id_genero`, `genero`, `historia_genero`, `instrumentos_comunes`) VALUES
-(1, 'Rock', 'El rock and roll como tal, tiene sus orígenes entre 1930 y 1950, pudiendo observarse, sin embargo, elementos propios de este género en producciones de rhythm and blues que datan incluso de los años 1920. En los orígenes del rock and roll existía una combinación de elementos de blues, boogie woogie, jazz y rhythm. El género también estaba influenciado por géneros tradicionales como el Hillbilly, la música folk de Irlanda, la música gospel y la música country.', 'Guitarra Eléctrica, bajo, batería, armónica, piano.'),
-(2, 'Pop', 'La música pop (del inglés pop music, contracción de popular music), también conocida simplemente como pop, es un género de música popular que tuvo su origen a finales de los años 1950 como una derivación del traditional pop, en combinación con otros géneros musicales que estaban de moda en aquel momento.1​2​ Los términos música pop y música popular se usan a menudo de manera indistinta, aunque el segundo tiene un sentido más amplio al dar cabida a otros géneros distintos del pop que se considere', 'Guitarra, bajo, batería, guitarra eléctrica, teclado, sintetizador, caja de ritmos, secuenciador, sampler, percusión.');
+INSERT INTO `genero` (`id_genero`, `genero_banda`, `historia_genero`, `instrumentos_comunes`) VALUES
+(1, 'rock', 'holAjaaaa', 'guitarra,violin'),
+(2, 'pop', '', ''),
+(6, 'folklore', 'a', 'asdasdasd');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `nombre_usuario` varchar(50) NOT NULL,
+  `contraseña` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`nombre_usuario`, `contraseña`) VALUES
+('oroquietaluciano@gmail.com', '$2y$10$mo8/XJ.vff0LvO/LQGbuj.Ami459kSwgEykdHP0M/y9ipA9CplxP.');
 
 --
 -- Índices para tablas volcadas
@@ -86,6 +104,12 @@ ALTER TABLE `genero`
   ADD PRIMARY KEY (`id_genero`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`nombre_usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -93,13 +117,13 @@ ALTER TABLE `genero`
 -- AUTO_INCREMENT de la tabla `bandas`
 --
 ALTER TABLE `bandas`
-  MODIFY `id_banda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_banda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
