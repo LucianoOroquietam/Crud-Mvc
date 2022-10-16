@@ -48,6 +48,8 @@ class generoModel{
         $query = $this->db->prepare('DELETE FROM genero WHERE id_genero=?');
         $query->execute([$id]);
 
+        
+
     }
 
     

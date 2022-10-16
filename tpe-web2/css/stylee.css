@@ -8,6 +8,10 @@ img{
     width: 150px;
 }
 
+h1{
+    text-align: center;
+}
+
 .navigation {
     display: flex;
     justify-content: center;
@@ -98,8 +102,9 @@ ul li a{
 }
 
 fieldset input{
+
     margin-bottom: 1rem;
-    width: 60%;
+    width: 40%;
     margin-left: 5%;
     font-family: "Motiva Sans", Sans-serif;
     color: aliceblue;
@@ -118,9 +123,10 @@ fieldset div{
     
 }
 fieldset{
-    width: 50%;
-    margin-left: 25%;
-    
+    width: 35%;
+    margin-left: 62%;
+    margin-top: -400px;
+
     box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
 }
 
@@ -129,4 +135,31 @@ a{
     font-weight: normal;
     text-decoration: none;
     color: aliceblue;
+}
+
+
+
+.w-100{
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 60%;
+    height: 100%;
+    object-position: left;
+}
+
+.btn-sesion{
+    background-color: rgb(8, 8, 8);
+          color: white;
+          padding: .8rem;
+          margin-top: 1rem;
+          margin-left: 100px ;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          /*esquinas redondeadas en el boton*/
+          border-radius: 0.5rem;
+          width: 50%;
+          text-align: center;
+          border: none;
+          cursor: pointer;
 }

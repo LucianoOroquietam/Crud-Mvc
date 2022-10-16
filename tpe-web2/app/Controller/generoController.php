@@ -17,6 +17,7 @@ class generoController{
     }
 
     function showGenre(){
+        session_start();
         $genre = $this->modelG->showGenreFromdDb();
         $this->viewG->showGenreById($genre);
     }
@@ -30,14 +31,17 @@ class generoController{
 
     function deleteBandsByGenre($id){
         $this->helper->checkLoggedIn();
-
-        $this->modelG->deleteGenreFromDb($id);
-        //$this->viewG->deleteGenre($deleteGenre);
         
-        header("Location: " . BASE_URL. "generos"); 
-        /*if(!empty($deleteGenre)){
-            //$this->viewG->deleteGenreFromDb("no se puede borrar dicho genero, porque hay bandas pertenecientes a ese genero");
-        }*/   
+
+        $genre = $this->modelG->getGenre($id);
+
+        if(!empty($genre)){
+         $this->viewG->showGenreById(null,"no se puede borrar dicho genero, porque hay bandas pertenecientes a ese genero");
+        }
+        else{
+            $this->modelG->deleteGenreFromDb($id);
+            //header("Location: " . BASE_URL. "generos"); 
+        } 
     }
 
 
@@ -70,9 +74,6 @@ class generoController{
             $historia = $_POST['historia'];
             $instrumentos = $_POST['instrumentos'];
 
-          
-        
-        
         $this->modelG->editGenreFromDb($genero_banda,$historia,$instrumentos,$id);
        
         $this->viewG->showGenreLocation();

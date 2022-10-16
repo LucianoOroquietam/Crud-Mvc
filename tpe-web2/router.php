@@ -8,7 +8,7 @@ require_once "app/Controller/authController.php";
 
 
 
-$action = 'login';
+$action = 'home';
 
 if(!empty($_GET['action'])){
 

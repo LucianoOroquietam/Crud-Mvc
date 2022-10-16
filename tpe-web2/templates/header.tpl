@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/stylee.css">
 
     <title>{$titulo}</title>
 </head>
@@ -19,13 +19,13 @@
 {else}
     <a href="login">Iniciar Sesion</a>
 {/if}
-{if isset($smarty.session.USER_EMAIL)}
+
     <nav class="navigation">
     
         <li class="item"><a href="home">Home</a></li>
         <li class="item"><a href="generos">Generos</a></li>
        
     </nav>
-{/if}
+
 
    

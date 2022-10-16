@@ -1,6 +1,21 @@
-{include file="header.tpl"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="{BASE_URL}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylee.css">
 
-<img href="../images/bandas.jpg">
+    <title>{$titulo}</title>
+</head>
+            
+<body>
+
+<h1>Iniciar Sesion</h1>
+<div class="">
+    <img src="images/bandas.jpg" alt="Login image" class="w-100 vh-100">
+</div>
 
 <fieldset>
   <legend>Ingresa tus datos</legend>
@@ -19,7 +34,7 @@
       
   </div>
 
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn-sesion">Iniciar Sesion</button>
 
   <div>
   {$message}
@@ -30,4 +45,3 @@
 
 
    
-{include file="footer.tpl"}
