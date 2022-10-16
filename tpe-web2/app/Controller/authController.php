@@ -15,8 +15,7 @@ class authController{
 
         $this->model = new userModel();
         $this->view = new authView();
-
-
+        
     }
 
 
@@ -43,7 +42,6 @@ class authController{
             
             if (password_verify($password, $user->contraseña)) {
 
-                // inicio una session para este usuario
                 session_start();
                 
                 $_SESSION['USER_EMAIL'] = $user->nombre_usuario;

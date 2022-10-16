@@ -73,9 +73,9 @@ class bandasController{
         $this->helper->checkLoggedIn();
 
         $band = $this->model->getOne($id);
-        
 
         $genres = $this->genreModel->showGenreFromdDb();
+        
         $this->view->showFormUpdate($band,$genres,"update");
         
     }

@@ -4,8 +4,10 @@
 
   <h1>Generos</h1>
   {if $error}
-    {$error}
-    <a href="generos">Volver</a>
+    
+    <p class="prueba">{$error}</p>
+    <a class="location" href="generos">Volver</a>
+    
   {/if}
   
     {{foreach from=$genre item=$i}}

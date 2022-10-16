@@ -44,7 +44,7 @@ class generoController{
            
         }
         else{
-            $this->viewG->showGenreById(null, "no se puede borrar dicho genero, porque hay bandas pertenecientes a ese genero");
+            $this->viewG->showGenreById(null, "ERROR!!! no se puede borrar dicho genero, porque hay bandas pertenecientes a ese genero");
                
         }
     }

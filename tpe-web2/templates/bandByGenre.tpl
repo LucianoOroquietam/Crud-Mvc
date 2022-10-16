@@ -7,8 +7,8 @@
 <table>   
     
     <thead>
-        <th>Nombre_Banda</th> 
-        <th>imagen_banda</th>
+        <th>Nombre Banda</th> 
+        <th>imagen banda</th>
     </thead>
 
    

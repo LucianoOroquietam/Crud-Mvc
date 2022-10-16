@@ -12,7 +12,7 @@ class bandasView{
     }
 
     function showBandas($bandas){
-      
+    
         $this->smarty->assign('titulo',"Bandas Musicales");
         $this->smarty->assign('encabezado',"Agrupaciones Musicales");
         $this->smarty->assign('bandas',$bandas);
@@ -21,15 +21,15 @@ class bandasView{
         $this->smarty->display('templates/header.tpl');
         $this->smarty->display('templates/viewTableAll.tpl');
         $this->smarty->display('templates/footer.tpl');
-    
-        }
+
+    }
 
     function showDetails($banda){
         $this->smarty->assign('titulo',"Bandas Musicales");
         $this->smarty->assign('banda', $banda);
 
         $this->smarty->display('templates/viewDetails.tpl');
-        
+    
     } 
     
     
@@ -37,6 +37,7 @@ class bandasView{
         $this->smarty->assign('titulo',"Bandas Musicales");
         $this->smarty->assign("action", $action);
         $this->smarty->assign("genres", $genres);
+        
         $this->smarty->display("templates/form.tpl");
     }
 
@@ -44,8 +45,8 @@ class bandasView{
         $this->smarty->assign('titulo',"Bandas Musicales");
         $this->smarty->assign('action', $action);
         $this->smarty->assign('band', $band);
-       
         $this->smarty->assign('genres', $genres);
+
         $this->smarty->display("templates/form.tpl");
 
 

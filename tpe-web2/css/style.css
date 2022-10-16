@@ -109,19 +109,16 @@ fieldset input{
     font-family: "Motiva Sans", Sans-serif;
     color: aliceblue;
 }
-fieldset button{
-    
+fieldset button{    
     width: 20%;
     margin-left: 35%;
-    
-
 }
 
 
 fieldset div{
     justify-content: center;
-    
 }
+
 fieldset{
     width: 35%;
     margin-left: 62%;
@@ -136,8 +133,6 @@ a{
     text-decoration: none;
     color: aliceblue;
 }
-
-
 
 .w-100{
     
@@ -165,7 +160,18 @@ a{
 }
 
 
-.error{
+.error,.prueba{
     background-color: white;
     color: red;
 }
+
+.prueba{
+    text-align: center;
+    text-transform: capitalize;
+    width: 50%;
+    margin-left: 400px;
+}
+.location{
+    margin-left: 730px;
+}
+

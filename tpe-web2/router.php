@@ -1,11 +1,10 @@
 <?php
 
-define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
-
 require_once "app/Controller/bandasController.php";
 require_once "app/Controller/generoController.php";
 require_once "app/Controller/authController.php";
 
+define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
 
 
 $action = 'home';
@@ -19,7 +18,6 @@ if(!empty($_GET['action'])){
 $partsURL = explode("/", $action);
 
 
-//para llamar a la funcion de una clase debo instanciar la clase
 $bandasController = new bandasController();
 $generoController = new generoController();
 $loginController = new authController();
@@ -33,7 +31,8 @@ switch($partsURL[0]){
    case 'generos':
         $generoController->showGenre();
         break;
-        
+     
+      //show genre and band
    case 'showGenero':
          $generoController->showBandsByGenre($partsURL[1]);
          break;
@@ -41,6 +40,8 @@ switch($partsURL[0]){
    case 'showBanda':
         $bandasController->viewDetails($partsURL[1]);
         break;
+
+     //delete band and genre   
         
    case 'delete':
         $bandasController->deleteBand($partsURL[1]);
@@ -50,14 +51,26 @@ switch($partsURL[0]){
         $generoController->deleteBandsByGenre($partsURL[1]);
         break;
 
+     //show form and create band/Genre
+
    case 'formAdd':
         $bandasController->showForm("createBand");
         break;
 
    case 'createBand':
         $bandasController->createBand();
-        break;           
+        break;
         
+        
+    case 'formAddGenre':
+        $generoController->showFormGenre();
+        break;
+
+     case 'createGenre':
+        $generoController->createGenre();
+        break;
+
+    //updates    
    case 'update':
         $bandasController->updateForm($partsURL[1]);
         break;
@@ -74,14 +87,9 @@ switch($partsURL[0]){
         $generoController->finishUpdateGenre($partsURL[1]);  
         break;
 
-    case 'formAddGenre':
-          $generoController->showFormGenre();
-          break;
+    
 
-     case 'createGenre':
-          $generoController->createGenre();
-          break;
-
+     //Login-Logout
    case 'login':
         $loginController->showFormLogin();
         break;
@@ -94,7 +102,7 @@ switch($partsURL[0]){
      $loginController->logout();
      break;
        
-
+     //hash password
    case 'hash':
        $loginController->getHash();   
         break;

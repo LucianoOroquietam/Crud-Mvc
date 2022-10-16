@@ -8,10 +8,10 @@
 <table>   
                 <thead>
                 <tr>
-                    <th>Nombre_Banda</th>
-                   <th>Cantidad_discos</th>
-                   <th>Origen_banda</th>
-                    <th>Imagen_banda</th>
+                    <th>Nombre Banda</th>
+                   <th>Cantidad discos</th>
+                   <th>Origen banda</th>
+                    <th>Imagen banda</th>
                     {if isset($smarty.session.USER_EMAIL)}
                     <th></th>
                     <th></th>
