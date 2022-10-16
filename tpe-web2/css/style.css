@@ -125,7 +125,7 @@ fieldset div{
 fieldset{
     width: 35%;
     margin-left: 62%;
-    margin-top: -400px;
+    margin-top: -350px;
 
     box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
 }
@@ -162,4 +162,10 @@ a{
           text-align: center;
           border: none;
           cursor: pointer;
+}
+
+
+.error{
+    background-color: white;
+    color: red;
 }

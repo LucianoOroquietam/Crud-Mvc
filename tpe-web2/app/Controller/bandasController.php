@@ -23,13 +23,14 @@ class bandasController{
 
 
     function showHome(){
-        
+        session_start();
         $bandas = $this->model->getAll();
         
         $this->view->showBandas($bandas);
     }
 
     function viewDetails($id){
+        session_start();
         $banda = $this->model->getOne($id);
         $this->view->showDetails($banda);
     }
@@ -70,8 +71,9 @@ class bandasController{
 
     function updateForm($id){
         $this->helper->checkLoggedIn();
+
         $band = $this->model->getOne($id);
-        //$genre = $this->genreModel->getGenre($band->id_genero_fk);
+        
 
         $genres = $this->genreModel->showGenreFromdDb();
         $this->view->showFormUpdate($band,$genres,"update");

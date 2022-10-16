@@ -24,6 +24,7 @@
         <li> <h3> Historia del genero: </h3> {$i->historia_genero}</li>
 
         <li> <h3> Instrumentos Comunes: </h3> {$i->instrumentos_comunes}</li>
+        <hr>
         
         </li>
       </ul>

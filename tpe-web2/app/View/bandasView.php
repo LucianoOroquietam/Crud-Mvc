@@ -12,7 +12,7 @@ class bandasView{
     }
 
     function showBandas($bandas){
-        session_start();
+      
         $this->smarty->assign('titulo',"Bandas Musicales");
         $this->smarty->assign('encabezado',"Agrupaciones Musicales");
         $this->smarty->assign('bandas',$bandas);

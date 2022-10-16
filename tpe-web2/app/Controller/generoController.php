@@ -10,10 +10,12 @@ class generoController{
     private $viewG;
     private $modelG;
     private $helper;
+    
     function __construct(){
         $this->viewG = new generoView();
         $this->modelG= new generoModel();
         $this->helper = new userHelper();
+        
     }
 
     function showGenre(){
@@ -33,15 +35,18 @@ class generoController{
         $this->helper->checkLoggedIn();
         
 
-        $genre = $this->modelG->getGenre($id);
+        $genre = $this->modelG->showBandByGenreFromDb($id);
 
-        if(!empty($genre)){
-         $this->viewG->showGenreById(null,"no se puede borrar dicho genero, porque hay bandas pertenecientes a ese genero");
+
+        if(empty($genre)){
+            $this->modelG->deleteGenreFromDb($id);
+            $this->viewG->showGenreLocation();
+           
         }
         else{
-            $this->modelG->deleteGenreFromDb($id);
-            //header("Location: " . BASE_URL. "generos"); 
-        } 
+            $this->viewG->showGenreById(null, "no se puede borrar dicho genero, porque hay bandas pertenecientes a ese genero");
+               
+        }
     }
 
 

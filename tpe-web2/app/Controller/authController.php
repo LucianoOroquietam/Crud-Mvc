@@ -28,7 +28,6 @@ class authController{
     function getHash(){
         $hash = password_hash("lulo123", PASSWORD_BCRYPT);
         echo $hash;
-        //lulo123
     }
 
 
@@ -46,24 +45,24 @@ class authController{
 
                 // inicio una session para este usuario
                 session_start();
-                //$_SESSION['USER_PASSWORD'] = $user->password;
+                
                 $_SESSION['USER_EMAIL'] = $user->nombre_usuario;
-                //$_SESSION['IS_LOGGED'] = true;
+                
 
                
                 header("Location: " . BASE_URL . "home");
             }
             else{
-                $this->view->formLogin("El usuario o la contraseña es incorrecto.");
+                $this->view->formLogin("El usuario o la contraseña es incorrecta.");
             }
 
         } else {
             $this->view->formLogin("El usuario no existe.");
-            header("Location: " . BASE_URL . "login");
+            
            }
     }
 
-
+    
    
 
     function logOut(){

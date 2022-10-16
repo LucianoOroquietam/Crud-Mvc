@@ -9,7 +9,7 @@ class generoView{
         $this->smartyGenre= new Smarty();
     }
 
-    function showGenreById($genre,$error=null){
+    function showGenreById($genre, $error=null){
 
       
         $this->smartyGenre->assign("genre", $genre);
