@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2022 a las 05:55:43
+-- Tiempo de generación: 17-10-2022 a las 21:40:58
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -41,13 +41,13 @@ CREATE TABLE `bandas` (
 --
 
 INSERT INTO `bandas` (`id_banda`, `id_genero_fk`, `nombre_banda`, `cantidad_discos`, `origen_banda`, `imagen_banda`) VALUES
-(3, 2, 'ABBA', 9, ' Estocolmo, Suecia (1972)', './images/abbaa.jpg'),
-(4, 1, 'Soda stereo', 7, 'Buenos Aires,Argentina(1982)', './images/soda stereo.png'),
-(5, 2, 'La Oreja de Van Gogh', 8, 'San Sebastián, España (1996)', './images/la oreja de van gogh.jpg'),
-(21, 1, 'La vela puerca', 10, 'Montevideo,Uruguay(1995)', './images/la vela puerca.jpg'),
-(22, 1, 'El Plan De La Mariposa', 6, 'Necochea,Argentina(2008)', './images/el plan de la mariposa.jpg'),
+(3, 2, 'ABBA', 9, ' Estocolmo, Suecia (1972)', 'images/abbaa.jpg'),
+(4, 1, 'Soda stereo', 7, 'Buenos Aires,Argentina(1982)', 'images/soda stereo.png'),
+(5, 2, 'La Oreja de Van Gogh', 8, 'San Sebastián, España (1996)', 'images/la oreja de van gogh.jpg'),
+(21, 1, 'La vela puerca', 10, 'Montevideo,Uruguay(1995)', 'images/la vela puerca.jpg'),
+(22, 1, 'El Plan De La Mariposa', 6, 'Necochea,Argentina(2008)', 'images/el plan de la mariposa.jpg'),
 (23, 1, 'Queen', 15, 'Londres, Inglaterra(1970)', 'images/queen.jpg'),
-(24, 2, 'Backstreet Boys', 9, 'Orlando, Florida Estados Unidos(1993)', './images/backstreet boys.jpg');
+(24, 2, 'Backstreet Boys', 9, 'Orlando, Florida Estados Unidos(1993)', 'images/backstreet boys.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,8 +68,7 @@ CREATE TABLE `genero` (
 
 INSERT INTO `genero` (`id_genero`, `genero_banda`, `historia_genero`, `instrumentos_comunes`) VALUES
 (1, 'Rock', 'El rock and roll como tal, El género también estaba influenciado por géneros tradicionales como el Hillbilly, la música folk de Irlanda, la música gospel y la música country. Regresando aún más atrás en el tiempo, se puede trazar el linaje del rock and roll hasta el antiguo distrito Five Points de Nueva York a mediados del siglo XIX, que fue el escenario de la primera fusión entre la música africana fuertemente rítmica y los géneros europeos.tiene sus orígenes entre 1930 y 1950', 'Bajo. batería. guitarra eléctrica. teclados. voz.'),
-(2, 'Pop', 'La música Pop tiene su origen en la música popular Estadounidense y Británica que surge a partir del Rock & Roll de los años 1950', 'Voz, guitarra, bajo, batería, guitarra eléctrica, teclado, sintetizador, caja de ritmos, secuenciador, sampler, percusión'),
-(6, 'Folklore', 'Fue el arqueólogo inglés William John Thoms quien usó por primera vez la palabra “folklor”, el 22 de agosto de 1846, en un escrito publicado en la revista The Athenaeum de Londres. El concepto deriva de \"folk\" (pueblo, gente, raza) y de \"lore\" (saber, ciencia), y se conjuga como el \"saber popular\".', 'guitarra. bombo. violín. armónica. acordeón. acordeona. quena. flauta.');
+(2, 'Pop', 'La música Pop tiene su origen en la música popular Estadounidense y Británica que surge a partir del Rock & Roll de los años 1950', 'Voz, guitarra, bajo, batería, guitarra eléctrica, teclado, sintetizador, caja de ritmos, secuenciador, sampler, percusión');
 
 -- --------------------------------------------------------
 
@@ -126,7 +125,7 @@ ALTER TABLE `bandas`
 -- AUTO_INCREMENT de la tabla `genero`
 --
 ALTER TABLE `genero`
-  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
