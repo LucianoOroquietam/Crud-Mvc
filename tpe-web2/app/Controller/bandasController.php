@@ -37,10 +37,12 @@ class bandasController{
 
     function deleteBand($id){
         
+        
         $this->helper->checkLoggedIn();
-
+        
         $this->model->deleteBandFromDb($id);
-       
+        
+        
         $this->view->showHomeLocation();    
     }
 
