@@ -14,7 +14,7 @@
 
 <h1>Iniciar Sesion</h1>
 <div class="">
-    <img src="images/bandas.jpg" alt="Login image" class="w-100">
+    <img src="images/bandas.jpg" alt="Login image" class="h-100">
 </div>
 
 <fieldset>

@@ -15,17 +15,21 @@
     <div class="contenedor">
       <ul>  
         <li>
-        <button> <a href='showGenero/{$i->id_genero}'>{$i->genero_banda} </a> </button>
+        <div class="conteiner-flex">
+        <h3 class="genero">Genero:</h3> 
+        <a class="genero-a" href='showGenero/{$i->id_genero}'>{$i->genero_banda} </a>
+        </div>
+        <li> <h3> Historia del genero: </h3> <p class="genero-detalles">{$i->historia_genero}</p></li>
+
+        <li> <h3> Instrumentos Comunes: </h3> <p class="genero-detalles">{$i->instrumentos_comunes}</p></li>
         {if isset($smarty.session.USER_EMAIL)}
-          
+          <div class="conteiner-flex">
           <li><button> <a href='deleteGenre/{$i->id_genero}'>Eliminar Genero</a></button></li>
           <li><button> <a href='updateGenre/{$i->id_genero}'>Editar Genero</a></button></li>
-          
+          </div>
           {/if}
   
-        <li> <h3> Historia del genero: </h3> {$i->historia_genero}</li>
-
-        <li> <h3> Instrumentos Comunes: </h3> {$i->instrumentos_comunes}</li>
+        
         <hr>
         
         </li>

@@ -20,7 +20,7 @@ class generoModel{
     }
 
     function getGenreFromdDb(){
-        $query = $this->db->prepare("SELECT * FROM genero");
+        $query = $this->db->prepare('SELECT * FROM genero');
         $query->execute();
 
         $genreByDb = $query->fetchAll(PDO::FETCH_OBJ);

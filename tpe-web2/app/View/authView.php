@@ -8,9 +8,6 @@ class authView{
 
     }
 
-
-    //llamarlo con parametro y sin parametros message = '' valor default
-    //si el parametro message no me lo pusieron , bueno ponele vacio
     function formLogin($message = ''){
        
         

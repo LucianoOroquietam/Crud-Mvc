@@ -134,8 +134,7 @@ a{
     color: aliceblue;
 }
 
-.w-100{
-    
+.h-100{
     background-color: rgba(0, 0, 0, 0.7);
     width: 60%;
     height: 100%;
@@ -144,19 +143,19 @@ a{
 
 .btn-sesion{
     background-color: rgb(8, 8, 8);
-          color: white;
-          padding: .8rem;
-          margin-top: 1rem;
-          margin-left: 100px ;
-          text-decoration: none;
-          text-transform: uppercase;
-          font-weight: bold;
-          /*esquinas redondeadas en el boton*/
-          border-radius: 0.5rem;
-          width: 50%;
-          text-align: center;
-          border: none;
-          cursor: pointer;
+    color: white;
+    padding: .8rem;
+    margin-top: 1rem;
+    margin-left: 100px ;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    /*esquinas redondeadas en el boton*/
+    border-radius: 0.5rem;
+    width: 50%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -175,3 +174,27 @@ a{
     margin-left: 41rem;
 }
 
+.genero-detalles{
+    margin: 1rem;
+}
+
+.conteiner-flex{
+    display: flex;
+    gap: .5rem;
+}
+
+.genero-a{
+    margin: 1.3rem;
+   padding: .3rem;
+
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+    
+    
+    

@@ -1,6 +1,4 @@
 <?php
-
-
 class bandasModel{
 
 
@@ -47,7 +45,7 @@ class bandasModel{
 
     function editBandFromDb($banda,$discos,$origen,$genero,$id){
         
-        $query = $this->db->prepare("UPDATE bandas SET nombre_banda=?,cantidad_discos=?,origen_banda=?, id_genero_fk=? WHERE id_banda=?");
+        $query = $this->db->prepare('UPDATE bandas SET nombre_banda=?,cantidad_discos=?,origen_banda=?, id_genero_fk=? WHERE id_banda=?');
         $query->execute(array($banda,$discos,$origen,$genero,$id));
     }
 
