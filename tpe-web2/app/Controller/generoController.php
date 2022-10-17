@@ -9,26 +9,38 @@ require_once 'helpers/userHelper.php';
 class generoController{
     private $viewG;
     private $modelG;
+    private $modelB;
     private $helper;
+    
     
     function __construct(){
         $this->viewG = new generoView();
-        $this->modelG= new generoModel();
+        $this->modelG = new generoModel();
+        $this->modelB = new bandasModel();
         $this->helper = new userHelper();
         
     }
 
     function showGenre(){
         session_start();
+
         $genre = $this->modelG->getGenreFromdDb();
+
         $this->viewG->showGenreById($genre);
     }
 
     function showBandsByGenre($id){
         session_start();
         $genre = $this->modelG->getOne($id);
-        $bandBygenre = $this->modelG->getBandByGenreFromDb($id);
-        $this->viewG->bandByGenre($bandBygenre,$genre); 
+        $bandBygenre = $this->modelB->getBandByGenreFromDb($id);
+        if(!empty($bandBygenre)){
+            $this->viewG->bandByGenre($bandBygenre,$genre); 
+        }
+        else{
+           
+            $this->viewG->bandByGenre(null,null, "ERROR!!! no se puede mostrar el genero " . $genre->genero_banda . " ya que no contiene ninguna banda");
+        }
+        
        
     }
 
@@ -36,16 +48,16 @@ class generoController{
         $this->helper->checkLoggedIn();
         
 
-        $genre = $this->modelG->getBandByGenreFromDb($id);
+        $bands = $this->modelB->getBandByGenreFromDb($id);
 
 
-        if(empty($genre)){
+        if(empty($bands)){
             $this->modelG->deleteGenreFromDb($id);
             $this->viewG->showGenreLocation();
            
         }
         else{
-            $this->viewG->showGenreById(null, "ERROR!!! no se puede borrar dicho genero, porque hay bandas pertenecientes a ese genero");
+            $this->viewG->showGenreById(null, "ERROR!!! no se puede borrar ,porque hay bandas pertenecientes a ese genero");
                
         }
     }

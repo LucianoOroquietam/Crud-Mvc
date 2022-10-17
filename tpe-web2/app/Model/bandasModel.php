@@ -26,6 +26,18 @@ class bandasModel{
 
     }
 
+    function getBandByGenreFromDb($id){
+
+        $query = $this->db->prepare('SELECT * FROM bandas WHERE id_genero_fk=?');
+        $query->execute([$id]);
+
+        $genreByBand = $query->fetchAll(PDO::FETCH_OBJ);
+            
+                
+        return $genreByBand;
+    }
+
+
 
     function deleteBandFromDb($id){
         $query = $this->db->prepare('DELETE FROM bandas WHERE id_banda=?');

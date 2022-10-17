@@ -20,11 +20,12 @@ class generoView{
         $this->smartyGenre->display("templates/genre.tpl");
     }
 
-    function bandByGenre($genreBand,$genre){
+    function bandByGenre($genreBand,$genre, $error=null){
         $this->smartyGenre->assign('titulo',"Genero");
         $this->smartyGenre->assign('encabezado',"Genero");
         $this->smartyGenre->assign('genre',$genre);
         $this->smartyGenre->assign("genreBand", $genreBand);
+        $this->smartyGenre->assign("error", $error);
 
         $this->smartyGenre->display("templates/bandByGenre.tpl");
     }

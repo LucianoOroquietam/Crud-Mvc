@@ -2,7 +2,13 @@
 
 {{include file="header.tpl"}}
 
-<h1>Genero:{$genre->genero_banda}</h1>
+{if $error}
+    <p class="msg-error">{$error}</p>
+
+
+{else}
+    
+    <h1>Genero:{$genre->genero_banda}</h1>
 
 <table>   
     
@@ -23,3 +29,7 @@
     {{/foreach}}                   
     
 </table>
+
+    
+{/if}
+

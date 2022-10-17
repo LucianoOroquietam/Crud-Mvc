@@ -24,13 +24,13 @@
                     
   <div>
       <label for="email">E-mail</label>
-      <input type="email" name='email' placeholder="Ejemplo@gmail.com">
+      <input type="email" name='email' placeholder="Ejemplo@gmail.com" required>
   </div>
 
   <div>
 
       <label for="password">Contraseña</label>
-      <input type="password" name='password' placeholder="*******">
+      <input type="password" name='password' placeholder="*******" required>
       
   </div>
 

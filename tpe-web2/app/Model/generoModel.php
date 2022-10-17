@@ -33,17 +33,7 @@ class generoModel{
         $query->execute(array($genero_banda,$historia,$instrumentos,$id));
     }
 
-    function getBandByGenreFromDb($id){
-
-        $query = $this->db->prepare('SELECT * FROM bandas WHERE id_genero_fk=?');
-        $query->execute([$id]);
-
-        $genreByBand = $query->fetchAll(PDO::FETCH_OBJ);
-            
-                
-        return $genreByBand;
-    }
-
+    
     function deleteGenreFromDb($id){
         $query = $this->db->prepare('DELETE FROM genero WHERE id_genero=?');
         $query->execute([$id]);
