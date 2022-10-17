@@ -15,7 +15,6 @@ class bandasModel{
 
         $bandas= $query->fetchAll(PDO::FETCH_OBJ);
 
-
         return $bandas;
     }
 
@@ -27,13 +26,13 @@ class bandasModel{
 
         return $banda;
 
-        
     }
 
 
     function deleteBandFromDb($id){
         $query = $this->db->prepare('DELETE FROM bandas WHERE id_banda=?');
         $query->execute([$id]);
+
     }
 
 
@@ -41,8 +40,6 @@ class bandasModel{
     function insertBandFromDb($banda,$discos,$origen,$genero){
         $query = $this->db->prepare('INSERT INTO bandas(nombre_banda,cantidad_discos,origen_banda,id_genero_fk) VALUES(?, ?, ?, ?)');
         $query->execute(array($banda,$discos,$origen,$genero)); 
-
-        
 
     }
 

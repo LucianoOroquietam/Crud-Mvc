@@ -4,12 +4,11 @@
 <table>   
     <thead>
     <tr>    
-        <th>Nombre Banda</th>
-        <th>Genero</th>
-        <th>Cantidad discos</th>
-        <th>Origen banda</th>
-        <th>Imagen banda</th>
-       
+      <th>Nombre De La Banda</th>
+      <th>Genero De La Banda</th>
+      <th>Cantidad De Discos</th>
+      <th>Origen De La Banda</th>
+      <th>Imagen De La Banda</th>
     </tr>
     
     </thead>

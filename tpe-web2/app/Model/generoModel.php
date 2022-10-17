@@ -8,7 +8,7 @@ class generoModel{
     }
 
 
-    function getGenre($id){
+    function getOne($id){
 
         $query = $this->db->prepare('SELECT * FROM genero WHERE id_genero=?');
         $query->execute([$id]);
@@ -19,7 +19,7 @@ class generoModel{
 
     }
 
-    function showGenreFromdDb(){
+    function getGenreFromdDb(){
         $query = $this->db->prepare("SELECT * FROM genero");
         $query->execute();
 
@@ -33,7 +33,7 @@ class generoModel{
         $query->execute(array($genero_banda,$historia,$instrumentos,$id));
     }
 
-    function showBandByGenreFromDb($id){
+    function getBandByGenreFromDb($id){
 
         $query = $this->db->prepare('SELECT * FROM bandas WHERE id_genero_fk=?');
         $query->execute([$id]);

@@ -20,13 +20,14 @@ class generoController{
 
     function showGenre(){
         session_start();
-        $genre = $this->modelG->showGenreFromdDb();
+        $genre = $this->modelG->getGenreFromdDb();
         $this->viewG->showGenreById($genre);
     }
 
     function showBandsByGenre($id){
-        $genre = $this->modelG->getGenre($id);
-        $bandBygenre = $this->modelG->showBandByGenreFromDb($id);
+        session_start();
+        $genre = $this->modelG->getOne($id);
+        $bandBygenre = $this->modelG->getBandByGenreFromDb($id);
         $this->viewG->bandByGenre($bandBygenre,$genre); 
        
     }
@@ -35,7 +36,7 @@ class generoController{
         $this->helper->checkLoggedIn();
         
 
-        $genre = $this->modelG->showBandByGenreFromDb($id);
+        $genre = $this->modelG->getBandByGenreFromDb($id);
 
 
         if(empty($genre)){
@@ -66,7 +67,7 @@ class generoController{
     function updateGenre($id){
         $this->helper->checkLoggedIn();
         
-        $genre = $this->modelG->getGenre($id);
+        $genre = $this->modelG->getOne($id);
         
         $this->viewG->showFormGenreUpdate($genre);
     }
@@ -82,10 +83,7 @@ class generoController{
         $this->modelG->editGenreFromDb($genero_banda,$historia,$instrumentos,$id);
        
         $this->viewG->showGenreLocation();
-        }//else COMPLETALO CAPO
-
-        
-
+        }
     }
     
     

@@ -5,7 +5,7 @@
   <h1>Generos</h1>
   {if $error}
     
-    <p class="prueba">{$error}</p>
+    <p class="msg-error">{$error}</p>
     <a class="location" href="generos">Volver</a>
     
   {/if}

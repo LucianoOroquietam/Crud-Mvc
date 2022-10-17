@@ -48,7 +48,7 @@ class bandasController{
     function showForm($action){
 
          $this->helper->checkLoggedIn();
-        $genres = $this->genreModel->showGenreFromdDb();
+        $genres = $this->genreModel->getGenreFromdDb();
         
         $this->view->showFormBand($action,$genres);
         
@@ -74,7 +74,7 @@ class bandasController{
 
         $band = $this->model->getOne($id);
 
-        $genres = $this->genreModel->showGenreFromdDb();
+        $genres = $this->genreModel->getGenreFromdDb();
         
         $this->view->showFormUpdate($band,$genres,"update");
         
