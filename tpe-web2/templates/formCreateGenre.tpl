@@ -12,5 +12,11 @@
 <input type="text" name="instrumentos" id="" value='' required>
 
 <button type="submit">Confirmar Edicion</button>
+
 </form>
+
+
+{if $error}
+    <p class="msg-error">{$error}</p>
+{/if}
 

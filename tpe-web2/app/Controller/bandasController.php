@@ -60,14 +60,22 @@ class bandasController{
   function createBand(){
     $this->helper->checkLoggedIn();
 
-        $banda = $_POST['banda'];
-        $discos = $_POST['discos'];
-        $origen = $_POST['origen'];
-        $genero = $_POST['genero'];
+        
+        if(!empty($_POST["banda"]) && $_POST["discos"] && $_POST["origen"] && $_POST["genero"]) {
 
-        $this->model->insertBandFromDb($banda,$discos,$origen,$genero);
+            $banda = $_POST['banda'];
+            $discos = $_POST['discos'];
+            $origen = $_POST['origen'];
+            $genero = $_POST['genero'];
 
-        $this->view->showHomeLocation();
+            $this->model->insertBandFromDb($banda,$discos,$origen,$genero);
+            $this->view->showHomeLocation();
+
+        }else{
+            $this->view->showFormBand(null,null,"Complete los campos correspondientes para crear la banda");
+        }
+
+       
 
     } 
 

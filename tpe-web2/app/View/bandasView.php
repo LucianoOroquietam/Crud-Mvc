@@ -33,10 +33,11 @@ class bandasView{
     } 
     
     
-    function showFormBand($action,$genres){
+    function showFormBand($action,$genres,$error=null){
         $this->smarty->assign('titulo',"Bandas Musicales");
         $this->smarty->assign("action", $action);
         $this->smarty->assign("genres", $genres);
+        $this->smarty->assign("error", $error);
         
         $this->smarty->display("templates/form.tpl");
     }

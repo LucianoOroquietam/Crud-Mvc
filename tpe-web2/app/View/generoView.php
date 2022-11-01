@@ -46,7 +46,8 @@ class generoView{
 
     }
 
-    function showFormGenre(){
+    function showFormGenre($error=null){
+        $this->smartyGenre->assign("error", $error);
         $this->smartyGenre->display("templates/formCreateGenre.tpl");
     }
 

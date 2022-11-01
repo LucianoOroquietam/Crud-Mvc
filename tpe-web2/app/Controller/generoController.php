@@ -96,6 +96,7 @@ class generoController{
        
         $this->viewG->showGenreLocation();
         }
+        
     }
     
     
@@ -114,6 +115,9 @@ class generoController{
 
             $this->modelG->createGenre($genero_banda,$historia,$instrumentos);
             $this->viewG->showGenreLocation();
+     }
+     else{
+        $this->viewG->showFormGenre("Complete los campos para crear el genero de una banda");
      }
     }
 

@@ -52,7 +52,13 @@
     
 
     <button type="submit">Agregar Banda</button>
+
+    {if $error}
+        <p class="msg-error">{$error}</p>
+    {/if}    
 </form>
+
+
             
 {/if}    
 
